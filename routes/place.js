@@ -32,11 +32,16 @@ var upload = multer({
     fileFilter : fileFilter
 });
 
-//PLACE /place/
+//PLACE /addPlace
 var cpUpload = upload.single('image');
-router.post('/place',
+router.post('/addPlace',
+    cpUpload,
     [
         body('location').trim()
         .isLength({ min : 3}).withMessage('The location must be greater than 3 characters'),
     ],
     placeController.createPlace);
+
+    router.get('/places',placeController.getPlaces);
+
+    module.exports = router;

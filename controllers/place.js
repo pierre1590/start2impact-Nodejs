@@ -41,3 +41,13 @@ exports.createPlace = (req,res,next) => {
         });
     }); 
 };
+
+//GET - ALL
+exports.getPlaces = (req,res) => {
+    Post.findAll({include: [{ model : Place, attributes : ['id','location','image']}]})
+    .then(posts => {
+        res.json({ places : places});
+    }).catch(
+        err => console.log(err)
+    );
+};

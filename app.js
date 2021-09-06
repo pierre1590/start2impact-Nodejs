@@ -24,7 +24,7 @@ router.get('/',function(req,res){
 });
 
 //Routing
-app.use('/',router);
+app.use('/routes',router);
 
 
 
