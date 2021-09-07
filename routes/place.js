@@ -2,7 +2,7 @@ const express = require('express');
 const {body, query} = require('express-validator/check');
 const router = express.Router();
 
-const placeController = require('../controllers/place');
+const {placeController }= require('../controllers/place');
 
 //Upload
 const path = require('path');
@@ -43,6 +43,6 @@ router.post('/addPlace',
     placeController.createPlace);
 
 //ALL PLACES /places
-    router.get('/places',placeController.getPlaces);
+    router.get('/allPlaces',placeController.getPlaces);
 
     module.exports = router;

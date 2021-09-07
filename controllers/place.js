@@ -5,7 +5,7 @@ const fs = require('fs');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
-const Place = require('../models/place').default;
+const Place = require('../models/place');
 
 
 //Create Place
@@ -46,7 +46,7 @@ exports.createPlace = (req,res) => {
 
 //GET - ALL
 exports.getPlaces = (req,res) => {
-    Post.findAll({include: [{ model : Place, attributes : ['id','location','image']}]})
+    Place.findAll()
     .then(places => {
         res.json({ places : places});
     }).catch(
