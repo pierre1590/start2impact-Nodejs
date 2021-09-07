@@ -1,14 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const bodyParser = require('body-parser');
 
 const sequelize = require('./utils/database');
 
 const app = express();
 
-//application/json
-app.use(bodyParser.json()); 
+
 
 app.use((req,res,next) => {
     res.setHeader('Access-Control-Allow-Origin','*');
@@ -24,7 +22,8 @@ router.get('/',function(req,res){
 });
 
 //Routing
-app.use('/routes',router);
+app.use('/', router);
+
 
 
 
@@ -34,7 +33,7 @@ const Place = require('./models/place');
 sequelize.authenticate().then( rec => {
     console.log('Connection Established Successfully');
     //sequelize.sync({force:true})
-    sequelize.sync({force:true})
+    sequelize.sync()
     .then(user => {
         console.log('Sync to DB successfully');
     })

@@ -42,6 +42,7 @@ router.post('/addPlace',
     ],
     placeController.createPlace);
 
+//ALL PLACES /places
     router.get('/places',placeController.getPlaces);
 
     module.exports = router;

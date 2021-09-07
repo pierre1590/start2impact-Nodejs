@@ -7,7 +7,9 @@ const Op = Sequelize.Op;
 
 const Place = require('../models/place');
 
-exports.createPlace = (req,res,next) => {
+
+//Create Place
+exports.createPlace = (req,res) => {
     const errors = validationResult(req);
 
     if(!errors.isEmpty()){
@@ -27,10 +29,10 @@ exports.createPlace = (req,res,next) => {
     const location = req.body.location;
    
     //INSERT NEL DATABASE
-    req.createPost({
+    req.createPlace({
         location : location,
         image : image
-    }).then((post) => {
+    }).then((place) => {
         res.status(201).json({ 
             messages : 'Success Operation',
             place : place
@@ -45,7 +47,7 @@ exports.createPlace = (req,res,next) => {
 //GET - ALL
 exports.getPlaces = (req,res) => {
     Post.findAll({include: [{ model : Place, attributes : ['id','location','image']}]})
-    .then(posts => {
+    .then(places => {
         res.json({ places : places});
     }).catch(
         err => console.log(err)
