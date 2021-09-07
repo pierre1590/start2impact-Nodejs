@@ -5,7 +5,7 @@ const fs = require('fs');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
-const Place = require('../models/place');
+const Place = require('../models/place').default;
 
 
 //Create Place

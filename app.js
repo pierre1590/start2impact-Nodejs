@@ -28,7 +28,7 @@ app.use('/', router);
 
 
 
-const Place = require('./models/place');
+const Place = require('./models/place').default;
 
 sequelize.authenticate().then( rec => {
     console.log('Connection Established Successfully');
