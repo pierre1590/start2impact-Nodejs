@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 
+const routes =  require('./routes/place.js');
 const sequelize = require('./utils/database');
-
+const ejs = require('ejs');
 const app = express();
 
 
@@ -21,14 +22,20 @@ router.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/index.html'));
 });
 
+app.set('view engine',"ejs");
+app.get('/', (req,res)=>{
+    res.render('index');
+});
 
-app.use('/',router);
-router.get('/routes');
+
+
+app.use('/',routes);
+app.get('/routes/place');
 
 
     sequelize.authenticate().then(rec => {
       console.log('Connection has been established successfully');
-      sequelize.sync()
+      sequelize.sync();
     });  
 
 

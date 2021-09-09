@@ -1,20 +1,20 @@
 const express = require('express');
-const {body, query} = require('express-validator/check');
+const {body,query} = require('express-validator');
 const router = express.Router();
-
-const {placeController }= require('../controllers/place');
+const uuid = require('uuid');
+const placeController = require('../controllers/place');
 
 //Upload
 const path = require('path');
 const multer = require('multer');
-const {uuid} = require('uuid');
+//const uuid = require('uuid');
 
 const storage = multer.diskStorage({
     destination : (req,file,callback) => {
         callback(null, 'public/images');
     },
     filename : (req,file,callback) => {
-        callback(null, uuid()+ path.extname(file.originalname));
+        callback(null,uuid + path.extname(file.originalname));
     },
 });
 
@@ -44,5 +44,6 @@ router.post('/addPlace',
 
 //ALL PLACES /places
     router.get('/allPlaces',placeController.getPlaces);
+    
 
     module.exports = router;

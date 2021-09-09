@@ -29,7 +29,7 @@ exports.createPlace = (req,res) => {
     const location = req.body.location;
    
     //INSERT NEL DATABASE
-    req.createPlace({
+    req.path.createPlace({
         location : location,
         image : image
     }).then((place) => {
@@ -53,3 +53,4 @@ exports.getPlaces = (req,res) => {
         err => console.log(err)
     );
 };
+
