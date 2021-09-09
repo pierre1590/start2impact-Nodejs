@@ -39,7 +39,7 @@ router.post('/addPlace',
 cpUpload,
     [
         body('location').trim()
-        .isLength({ min : 3}).withMessage('The location must be greater than 3 characters'),
+        .isLength({ min : 3}).withMessage('The location field must be greater than 3 characters'),
     ],
     placeController.createPlace);
 
