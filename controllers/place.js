@@ -29,17 +29,17 @@ exports.createPlace = (req,res) => {
     const location = req.body.location;
    
     //INSERT NEL DATABASE
-    req.path.createPlace({
+    Place.create({
         location : location,
         image : image
     }).then((place) => {
         res.status(201).json({ 
-            messages : 'Success Operation',
+            messages : 'Location saved successfully',
             place : place
         });
     }).catch( err => {
         return res.status(422).json({
-            message : 'Error in saving'
+            message : 'Oops, something went wrong'
         });
     }); 
 };

@@ -1,20 +1,21 @@
 const express = require('express');
 const {body,query} = require('express-validator');
 const router = express.Router();
-const uuid = require('uuid');
+
 const placeController = require('../controllers/place');
 
 //Upload
 const path = require('path');
 const multer = require('multer');
-//const uuid = require('uuid');
+const uuid = require('uuid').v4;
+
 
 const storage = multer.diskStorage({
     destination : (req,file,callback) => {
         callback(null, 'public/images');
     },
     filename : (req,file,callback) => {
-        callback(null,uuid + path.extname(file.originalname));
+        callback(null, uuid() + path.extname(file.originalname));
     },
 });
 
@@ -34,8 +35,8 @@ var upload = multer({
 
 //PLACE /addPlace
 var cpUpload = upload.single('image');
-router.post('/addPlace',
-    cpUpload,
+router.post('/addPlace', 
+cpUpload,
     [
         body('location').trim()
         .isLength({ min : 3}).withMessage('The location must be greater than 3 characters'),

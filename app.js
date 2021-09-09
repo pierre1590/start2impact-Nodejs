@@ -22,10 +22,8 @@ router.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-app.set('view engine',"ejs");
-app.get('/', (req,res)=>{
-    res.render('index');
-});
+/* app.set('view engine',"ejs");
+app.set('views', './views'); */
 
 
 
