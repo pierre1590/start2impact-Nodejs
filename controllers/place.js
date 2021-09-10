@@ -1,4 +1,4 @@
-const { validationResult } = require('express-validator/check');
+const { validationResult } = require('express-validator');
 const path = require('path');
 const fs = require('fs');
 
@@ -46,6 +46,9 @@ exports.createPlace = (req,res) => {
 
 //GET - ALL
 exports.getPlaces = (req,res) => {
+ const errors = validationResult(req);
+
+    
     Place.findAll()
     .then(places => {
         res.json({ places : places});

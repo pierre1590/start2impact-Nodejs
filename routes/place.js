@@ -41,7 +41,7 @@ cpUpload,
         body('location').trim()
         .isLength({ min : 3}).withMessage('The location field must be greater than 3 characters'),
     ],
-    placeController.createPlace);
+    placeController.createPlace,);
 
 //ALL PLACES /places
     router.get('/allPlaces',placeController.getPlaces);
