@@ -37,4 +37,4 @@ app.use(express.static('public'));
     });  
 
 
-app.listen(85);
+app.listen(process.env.PORT || 85);
