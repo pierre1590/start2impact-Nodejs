@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Polluted places</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+  </head>
+  <body>
+    
+      <form action="" method="POST" enctype="multipart/form-data">
+            <div class="field">
+                <label class="label">Location</label>
+                <div class="control">
+                  <input class="input is-rounded" name="location" type="text" placeholder="Insert Location...">
+                </div>
+              </div>
+              <div class="file">
+                <label class="file-label">
+                  <input class="file-input" type="file" name="resume">
+                  <span class="file-cta">
+                    <span class="file-icon">
+                      <i class="fas fa-upload"></i>
+                    </span>
+                    <span class="file-label">
+                      Choose a file…
+                    </span>
+                  </span>
+                </label>
+              </div>
+              <br/>
+              <input class="button is-light is-rounded" type="reset" value="Cancel">
+              <input class="button is-primary is-rounded" type="submit" value="Save">
+      </form>
+  </body>
+</html>    

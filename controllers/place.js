@@ -34,7 +34,7 @@ exports.createPlace = (req,res) => {
         image : image
     }).then((place) => {
         res.status(201).json({ 
-            messages : 'Location saved successfully',
+            message : 'Location saved successfully',
             place : place
         });
     }).catch( err => {
@@ -46,12 +46,10 @@ exports.createPlace = (req,res) => {
 
 //GET - ALL
 exports.getPlaces = (req,res) => {
- const errors = validationResult(req);
-
     
     Place.findAll()
     .then(places => {
-        res.json({ places : places});
+        res.json({ data : location,image});
     }).catch(
         err => console.log(err)
     );

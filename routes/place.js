@@ -35,16 +35,22 @@ var upload = multer({
 
 //PLACE /addPlace
 var cpUpload = upload.single('image');
+
 router.post('/addPlace', 
-cpUpload,
+cpUpload,(req,res)=>{
+    res.render('addPlace.ejs');
+},
     [
         body('location').trim()
         .isLength({ min : 3}).withMessage('The location field must be greater than 3 characters'),
     ],
-    placeController.createPlace,);
+    placeController.createPlace);
 
 //ALL PLACES /places
-    router.get('/allPlaces',placeController.getPlaces);
+    
+    router.get('/allPlaces',(req,res)=>{
+        res.render('allPlaces.ejs');
+    },placeController.getPlaces);
     
 
     module.exports = router;
