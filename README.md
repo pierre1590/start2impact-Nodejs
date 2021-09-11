@@ -4,7 +4,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">About the project</a>
     </li>
     <li><a href=#apis>APIs</a></li>
     <li><a href=#installation>Installation</a></li>
@@ -15,6 +15,8 @@
   </ol>
 </details>
 
+## About the project
+The project consists in creating two end-points or APIs, an end-point must allow the insertion in the database of a polluted location with relative image; and the other allows you to view a list of locations with images.
 ## APIs 
 - List of all polluted locations with images :
 ```
@@ -79,6 +81,6 @@ http://localhost:port/
 
 Piero Sabino - [@SabinoPiero](https://twitter.com/SabinoPiero) - [P137ru590](https://www.instagram.com/p137ru590/?hl=it) - [Piero Sabino](https://www.linkedin.com/in/piero-sabino-15a1b671/) - piero.sa@icloud.com
 
-Project Link: [https://github.com/pierre1590/recycle](https://github.com/pierre1590/recycle)
+Project Link: [https://github.com/pierre1590/start2impact-Nodejs](https://github.com/pierre1590/start2impact-Nodejs)
 
 
