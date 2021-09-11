@@ -59,5 +59,5 @@ To verify that the end-points worked I used Talend API Tester - Free edition, bu
 http://localhost:port/
 ```
 4) Click on the "save" button and then on the "send" button.
-5)The result will appear in the response screen, in the BODY field.
+
 
