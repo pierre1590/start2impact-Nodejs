@@ -52,7 +52,6 @@ http://localhost:85/addlPlace
 
 ## Check APIs
 To verify that the end-points worked I used Talend API Tester - Free edition, but you can also use other apps like Postman.
-
 1) Create a project.
 2) Add a request.
 3) Select the method(GET,POST,...) and type the link in the address bar:
