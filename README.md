@@ -1,5 +1,20 @@
 # Polluted cities
 
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+    <li><a href=#apis>APIs</a></li>
+    <li><a href=#installation>Installation</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#framework">Framework</a></li> 
+    <li><a href="#chech-apis">Chech APIs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
 ## APIs 
 - List of all polluted locations with images :
 ```
@@ -59,5 +74,11 @@ To verify that the end-points worked I used Talend API Tester - Free edition, bu
 http://localhost:port/
 ```
 4) Click on the "save" button and then on the "send" button.
+
+## Contact
+
+Piero Sabino - [@SabinoPiero](https://twitter.com/SabinoPiero) - [P137ru590](https://www.instagram.com/p137ru590/?hl=it) - [Piero Sabino](https://www.linkedin.com/in/piero-sabino-15a1b671/) - piero.sa@icloud.com
+
+Project Link: [https://github.com/pierre1590/recycle](https://github.com/pierre1590/recycle)
 
 
