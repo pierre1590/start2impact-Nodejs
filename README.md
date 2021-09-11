@@ -28,11 +28,12 @@ http://localhost:85/addlPlace
     }
 }
 ```
-5) Install project dependencies :
+5) In the public directory, create a folder for uploading images.
+6) Install project dependencies :
 ```
      npm install 
 ```
-6) Start the server :
+7) Start the server :
 ```
      npm start
 ```
