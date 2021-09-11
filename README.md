@@ -45,7 +45,7 @@ http://localhost:85/addlPlace
     }
 }
 ```
-5) In the public directory, create a folder for uploading images.
+5) Create a "public" folder and in the latter create another folder called "images" for uploading images.
 6) Install project dependencies :
 ```
      npm install 
