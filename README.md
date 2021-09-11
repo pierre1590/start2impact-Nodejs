@@ -1,4 +1,4 @@
-# Pollued cities
+# Polluted cities
 ## Installation
 1) Clone the repo :
  ``` 
@@ -6,8 +6,23 @@
 ```
 2) Setup a MySQL Database;
 3) Import the migration file <code>polluted_cities_places.sql</code>
-4) Create a nodemon file and fill it with your DB data;
+4) Create a nodemon.json file and fill it with your DB data:
+```
+{
+    "env" : {
+        "NODE_PORT" : "",
+        "NODE_DATABASE" : "",
+        "NODE_DATABASE_USER" : "",
+        "NODE_DATABASE_PW" : "",
+        "NODE_DATABASE_URL" : "" 
+    }
+}
+```
 5) Install project dependencies:
-    - npm install 
+```
+     npm install 
+```
 6) Start the server :
-    - npm start
+```
+     npm start
+```
