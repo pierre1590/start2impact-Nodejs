@@ -1,4 +1,4 @@
-### Pollued cities
+# Pollued cities
 ## Installation
 1) Clone the repo :
  ``` 
