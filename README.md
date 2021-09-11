@@ -39,6 +39,7 @@ http://localhost:85/addlPlace
 ```
 
 ## Built with 
+- Bulma
 - Node.js
 - MySQL
 - Multer
@@ -49,8 +50,8 @@ http://localhost:85/addlPlace
 ## Framework
 - Express.js
 
-
-
+## Check APIs
+To verify that the end-points worked I used Talend API Tester - Free edition, but you can also use other apps like Postman.
 
 
 
