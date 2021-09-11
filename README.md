@@ -38,7 +38,13 @@ http://localhost:85/addlPlace
      npm start
 ```
 
-## Usage
+## Built with 
+- Node.js
+- MySQL
+- Multer
+
+## Framework
+- Express.js
 
 
 
