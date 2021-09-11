@@ -49,7 +49,7 @@ exports.getPlaces = (req,res) => {
     
     Place.findAll()
     .then(places => {
-        res.json({ data : location,image});
+        res.json({places:places});
     }).catch(
         err => console.log(err)
     );
