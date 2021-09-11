@@ -10,7 +10,7 @@
     <li><a href=#installation>Installation</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#framework">Framework</a></li> 
-    <li><a href="#chech-apis">Chech APIs</a></li>
+    <li><a href="#check-apis">Check APIs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
