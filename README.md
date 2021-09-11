@@ -9,7 +9,6 @@ http://localhost:85/allPlaces
 ```
 http://localhost:85/addlPlace
 ```
-
 ## Installation
 1) Clone the repo :
  ``` 
