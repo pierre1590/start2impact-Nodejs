@@ -1,4 +1,15 @@
 # Polluted cities
+
+## APIs 
+- List of all polluted locations with images :
+```
+http://localhost:85/allPlaces
+```
+- Create a place with its image :
+```
+http://localhost:85/addlPlace
+```
+
 ## Installation
 1) Clone the repo :
  ``` 
@@ -18,7 +29,7 @@
     }
 }
 ```
-5) Install project dependencies:
+5) Install project dependencies :
 ```
      npm install 
 ```
@@ -26,3 +37,11 @@
 ```
      npm start
 ```
+
+## Usage
+
+
+
+
+
+
