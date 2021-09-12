@@ -8,6 +8,7 @@ const placeController = require('../controllers/place');
 const path = require('path');
 const multer = require('multer');
 const uuid = require('uuid').v4;
+const Place = require('../models/place');
 
 
 const storage = multer.diskStorage({
@@ -36,10 +37,8 @@ var upload = multer({
 //PLACE /addPlace
 var cpUpload = upload.single('image');
 
-router.post('/addPlace', 
-cpUpload,/* (req,res)=>{
-    res.render('addPlace.ejs');
-}, */
+router.post('/addPlace',
+cpUpload, 
     [
         body('location').trim()
         .isLength({ min : 3}).withMessage('The location field must be greater than 3 characters'),
@@ -48,9 +47,7 @@ cpUpload,/* (req,res)=>{
 
 //ALL PLACES /places
     
-    router.get('/allPlaces',/* (req,res)=>{
-        res.render('allPlaces.ejs');
-    }, */placeController.getPlaces);
+    router.get('/allPlaces',placeController.getPlaces);
     
 
     module.exports = router;
