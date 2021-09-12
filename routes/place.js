@@ -8,7 +8,7 @@ const placeController = require('../controllers/place');
 const path = require('path');
 const multer = require('multer');
 const uuid = require('uuid').v4;
-const Place = require('../models/place');
+
 
 
 const storage = multer.diskStorage({

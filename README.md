@@ -60,7 +60,6 @@ http://localhost:85/addlPlace
 - Node.js
 - MySQL
 - Multer
-- Ejs
 - Sequelize
 - uuid 
 

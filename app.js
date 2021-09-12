@@ -1,19 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const ejs = require('ejs');
+
 const routes =  require('./routes/place');
 const sequelize = require('./utils/database');
-const bodyParser = require('body-parser');
+
 
 const app = express();
 
 app.use('/',routes);
 
-app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+
 
 app.use((req,res,next) => {
     res.setHeader('Access-Control-Allow-Origin','*');
