@@ -56,7 +56,6 @@ http://localhost:85/addlPlace
 ```
 
 ## Built with 
-- Bulma
 - Node.js
 - MySQL
 - Multer
